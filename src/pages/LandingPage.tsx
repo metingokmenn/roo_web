@@ -12,6 +12,7 @@ import rooLogo from '../assets/images/roo-logo.png';
 const LandingPage: React.FC = () => {
   return (
     <div className="landing-page">
+      {/* The Navigation component is imported and rendered here */}
       <Navigation />
       
       {/* Hero Section */}
@@ -28,8 +29,10 @@ const LandingPage: React.FC = () => {
           <div className="feature-text">
             <h2>Elektrikli Araç Yolculuklarınızı Kolaylaştırın</h2>
             <p>
-              Elektrikli araçlarınızla yolculuğa çıkarken tüm şarj noktalarını kolayca planlayın.
-              Roo ile Türkiye'nin her yerinde güvenli ve kesintisiz seyahat edin.
+            Elektrikli aracınızla yolculuk yaparken şarj istasyonu aramak veya en uygun rotayı belirlemek zaman kaybına dönüşmesin. 
+            Roo ile Türkiye genelindeki tüm şarj istasyonlarına kolayca erişebilir, tek dokunuşla en iyi rota planlamasını yapabilirsiniz. 
+            Harici bir harita sağlayıcısına ihtiyaç duymadan, adım adım yönlendirme ile en konforlu rotayı keşfedin. Sağ dön, sola dön komutlarıyla güvenle ilerleyin.
+            Fiyat karşılaştırmaları ve tasarruf ipuçlarıyla yolculuğunuzu en verimli şekilde planlayın!
             </p>
           </div>
           <div className="app-preview">
@@ -55,8 +58,9 @@ const LandingPage: React.FC = () => {
           <div className="feature-text">
             <h2>Roo Premium ile Ayrıcalıkları Keşfedin</h2>
             <p>
-              Roo, elektrikli araçlarınız için yeni premium özellikleri ile karşınızda. Daha
-              detaylı analitik, özelleştirilmiş rota planlaması ve çok daha fazlası!
+            Roo, standart kullanımın yanı sıra premium avantajlar da sunuyor.
+            Kesintisiz navigasyon, özel indirimler ve gelişmiş özelliklerle yolculuğunuzu daha konforlu hale getirmek için premium üyelik seçeneklerimizi keşfedin.
+            Planlarımızı görüntülemek ve detaylı bilgi almak için
             </p>
           </div>
         </div>
@@ -65,37 +69,35 @@ const LandingPage: React.FC = () => {
       {/* Navigation Section */}
       <section className="navigation-section">
         <h2>Akıllı Navigasyon, Sorunsuz Şarj.</h2>
-        <img 
-          src={navigationPreview}
-          alt="Navigation Preview" 
-          style={{ maxWidth: '100%', borderRadius: '10px' }}
-        />
+        <img className='navigation-preview' src={navigationPreview} alt="navigationPreview" />
+        <div className="mission-vision">
+          <div className="mission">
+            <h3>Misyonumuz</h3>
+            <p>
+              Elektrikli araç sahipleri ve şarj istasyonları için entegre, kullanıcı dostu ve verimli bir platform sunarak, sürdürülebilir ulaşımın yaygınlaşmasına katkı sağlamak. Teknolojiyi ve inovasyonu ile şarj süreçlerini daha kolay ve erişilebilir hale getirmek.
+            </p>
+          </div>
+          <div className="separator"></div>
+          <div className="vision">
+            <h3>Vizyonumuz</h3>
+            <p>
+              Elektrikli araç kullanıcılarının yolculuklarını daha akıllı, verimli ve kesintisiz hale getiren bir ekosistem oluşturmak. Türkiye'de ve globalde sürdürülebilir mobilite çözümleri geliştirerek şarj altyapısını güçlendirmek ve kullanıcı deneyimini en üst seviyeye taşımak.
+            </p>
+          </div>
+        </div>
       </section>
-
-      {/* Mission & Vision Section */}
-      <div className="mission-vision">
-        <div className="mission">
-          <h3>Misyonumuz</h3>
-          <p>
-            Elektrikli araç kullanıcılarının seyahat deneyimini en üst düzeye çıkarmak için
-            yenilikçi çözümler sunmak ve sürdürülebilir ulaşımı desteklemek.
-          </p>
-        </div>
-        <div className="vision">
-          <h3>Vizyonumuz</h3>
-          <p>
-            Elektrikli araç ekosisteminde öncü bir platform olarak, kullanıcılarımıza
-            en iyi deneyimi sunmak ve sürdürülebilir ulaşımın geleceğini şekillendirmek.
-          </p>
-        </div>
-      </div>
 
       {/* Footer */}
       <footer className="footer">
         <div className="footer-content">
           <div className="footer-logo">
             <img src={rooLogo} alt="Roo Logo" style={{ height: '40px' }} />
-            <p>Türkiye'nin En İyi Elektrikli Araç Yol Arkadaşı</p>
+            <span style={{ fontSize: '32px', color: 'white', marginLeft: '10px' }}>Roo</span>
+          </div>
+          <div className="footer-address">
+            <p>Rootech Yazılım Donanım Ltd. Şti.</p>
+            <p>Hatun Mah. 1.Mezra Sk. No:1</p>
+            <p>Soma, Manisa 45500</p>
           </div>
           <div className="footer-links">
             <a href="/privacy">Privacy Policy</a>
