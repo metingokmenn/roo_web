@@ -1,3 +1,4 @@
+/* Base styles for all screen sizes */
 :root {
   --primary-color: #007bff;
   --secondary-color: #6c757d;
@@ -17,12 +18,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background-color);
   color: var(--text-color);
+  overflow-x: hidden;
 }
 
 .app-layout {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .app-header {
@@ -34,6 +37,7 @@ body {
 .app-main {
   flex: 1;
   padding: 2rem;
+  width: 100%;
 }
 
 .app-footer {
@@ -41,4 +45,51 @@ body {
   background-color: var(--secondary-color);
   color: white;
   text-align: center;
+}
+
+/* Desktop (1440px and above) */
+@media screen and (min-width: 1440px) {
+  .app-main {
+    padding: 3rem;
+  }
+
+  .app-header, .app-footer {
+    padding: 1.5rem;
+  }
+}
+
+/* Laptop (1024px to 1439px) */
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .app-main {
+    padding: 2.5rem;
+  }
+}
+
+/* Tablet (768px to 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .app-main {
+    padding: 2rem;
+  }
+}
+
+/* Mobile (767px and below) */
+@media screen and (max-width: 767px) {
+  .app-main {
+    padding: 1rem;
+  }
+
+  .app-header, .app-footer {
+    padding: 0.75rem;
+  }
+}
+
+/* Small Mobile (480px and below) */
+@media screen and (max-width: 480px) {
+  .app-main {
+    padding: 0.75rem;
+  }
+
+  .app-header, .app-footer {
+    padding: 0.5rem;
+  }
 } 

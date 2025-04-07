@@ -7,6 +7,7 @@ import '../assets/styles/navigation.css';
 import phoneMockup1 from '../assets/images/phone-mockup-1.png';
 import phoneMockup2 from '../assets/images/phone-mockup-2.png';
 import navigationPreview from '../assets/images/navigation-preview.jpg';
+import bgContent from '../assets/images/bg-content.png';
 import rooLogo from '../assets/images/roo-logo.png';
 
 const LandingPage: React.FC = () => {
@@ -69,7 +70,9 @@ const LandingPage: React.FC = () => {
       {/* Navigation Section */}
       <section className="navigation-section">
         <h2>Akıllı Navigasyon, Sorunsuz Şarj.</h2>
+        
         <img className='navigation-preview' src={navigationPreview} alt="navigationPreview" />
+        
         <div className="mission-vision">
           <div className="mission">
             <h3>Misyonumuz</h3>

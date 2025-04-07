@@ -1,3 +1,4 @@
+/* Base styles for all screen sizes */
 body {
   font-family: 'Helvetica', sans-serif; /* Set font to Helvetica */
 }
@@ -49,19 +50,26 @@ body {
 
 .hero-text {
   max-width: 600px;
-  margin-left: 10%;
-  position: relative; /* Ensure text is above the background images */
-  z-index: 2; /* Ensure text is above the background images */
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  text-align: start;
+  padding: 0 1rem;
 }
 
 .hero-text h1 {
   font-size: 3.5rem;
   margin-bottom: 1rem;
+  font-weight: lighter;
+  line-height: 1.2;
 }
 
 .hero-text p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   opacity: 0.9;
+  color: #618597;
+  font-weight: bold;
+  margin-bottom: 2rem;
 }
 
 .feature-section {
@@ -182,24 +190,149 @@ body {
   opacity: 1;
 }
 
-@media (max-width: 768px) {
+/* Desktop (1440px and above) */
+@media screen and (min-width: 1440px) {
+  .hero-text {
+    max-width: 700px;
+    margin-left: 25%;
+    margin-right: auto;
+  }
+
+  .hero-text h1 {
+    font-size: 4rem;
+    font-weight: lighter;
+  }
+
+  .feature-content {
+    max-width: 1400px;
+  }
+
+  .feature-text h2 {
+    font-size: 3.5rem;
+  }
+
+  .feature-text p {
+    font-size: 1.1rem;
+  }
+
+  .phone-mockup {
+    max-width: 350px;
+  }
+}
+
+/* Laptop (1024px to 1439px) */
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .hero-text {
+    max-width: 650px;
+    margin-left: 20%;
+    margin-right: auto;
+  }
+
+  .hero-text h1 {
+    font-size: 4rem;
+  }
+
+  .feature-content {
+    max-width: 1000px;
+  }
+
+  .feature-text h2 {
+    font-size: 3rem;
+  }
+}
+
+/* Tablet (768px to 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .hero-text {
+    max-width: 600px;
+    margin-left: 15%;
+    margin-right: auto;
+  }
+
+  .hero-text h1 {
+    font-size: 3.5rem;
+  }
+
+  .feature-content {
+    max-width: 800px;
+    gap: 2rem;
+  }
+
+  .feature-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .phone-mockup {
+    max-width: 250px;
+  }
+}
+
+/* Mobile (767px and below) */
+@media screen and (max-width: 767px) {
+  .hero-section {
+    padding: 1rem;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    padding: 0 1.5rem;
+    margin-left: 0;
+    margin-right: auto;
+  }
+
   .hero-text h1 {
     font-size: 2.5rem;
   }
 
+  .feature-section {
+    padding: 2rem 1rem;
+  }
+
   .feature-content {
     grid-template-columns: 1fr;
-  }
-
-  .mission-vision {
-    grid-template-columns: 1fr;
     gap: 2rem;
   }
 
-  .footer-content {
-    flex-direction: column;
-    gap: 2rem;
+  .feature-text {
+    padding: 1rem;
     text-align: center;
+  }
+
+  .feature-text h2 {
+    font-size: 2rem;
+  }
+
+  .app-preview {
+    order: -1;
+  }
+
+  .phone-mockup {
+    max-width: 200px;
+  }
+}
+
+/* Small Mobile (480px and below) */
+@media screen and (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+
+  .feature-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .feature-text p {
+    font-size: 0.9rem;
+  }
+
+  .phone-mockup {
+    max-width: 180px;
   }
 }
 

@@ -8,7 +8,7 @@ const Navigation: React.FC = () => {
     <nav className="navigation">
       <div className="nav-content">
         <div className="nav-logo">
-          <img src={rooLogo} alt="Roo" style={{ height: '30px' }} />
+          <img src={rooLogo} alt="Roo" />
         </div>
 
         {/* Mobile menu button */}
